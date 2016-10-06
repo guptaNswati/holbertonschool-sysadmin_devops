@@ -1,2 +1,3 @@
 #!/bin/bash
-chmod ug+0,o: hello
+chmod 7 hello
+
