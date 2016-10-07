@@ -1,0 +1,21 @@
+total 56
+drwxrwxr-x 2 vagrant vagrant 4096 Oct  7 20:16 .
+drwxrwxr-x 6 vagrant vagrant 4096 Oct  7 16:43 ..
+-rwxrw-r-- 1 vagrant vagrant   32 Oct  7 16:46 0-hello_world
+-rwxrw-r-- 1 vagrant vagrant   32 Oct  7 16:44 0-hello_world~
+-rw-rw-r-- 1 vagrant vagrant    0 Oct  7 19:35 1-confused_smiley
+-rwxrw-r-- 1 vagrant vagrant   28 Oct  7 17:18 2-hellofile
+-rw-rw-r-- 1 vagrant vagrant    0 Oct  7 17:17 2-hellofile~
+-rwxrw-r-- 1 vagrant vagrant   39 Oct  7 17:34 3-twofiles
+-rwxrw-r-- 1 vagrant vagrant   41 Oct  7 17:24 3-twofiles~
+-rwxrw-r-- 1 vagrant vagrant   29 Oct  7 17:57 4-lastlines
+-rwxrw-r-- 1 vagrant vagrant   37 Oct  7 17:48 4-lastlines~
+-rwxrw-r-- 1 vagrant vagrant   29 Oct  7 19:29 5-firstlines
+-rwxrw-r-- 1 vagrant vagrant   28 Oct  7 19:28 5-firstlines~
+-rw-rw-r-- 1 vagrant vagrant    0 Oct  7 19:35 6-third_line
+-rwxrw-r-- 1 vagrant vagrant   84 Oct  7 19:55 7-file
+-rwxrw-r-- 1 vagrant vagrant   85 Oct  7 19:55 7-file~
+-rwxrw-r-- 1 vagrant vagrant   36 Oct  7 20:15 8-cwd_state
+-rw-rw-r-- 1 vagrant vagrant    0 Oct  7 20:13 8-cwd_state~
+-rw-rw-r-- 1 vagrant vagrant    0 Oct  7 19:42 \*\'Holberton
+-rw-rw-r-- 1 vagrant vagrant    0 Oct  7 20:24 ls_cwd_content
