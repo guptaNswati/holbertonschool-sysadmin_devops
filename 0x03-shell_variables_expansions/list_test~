@@ -1,0 +1,10 @@
+bin
+boot
+dev
+etc
+home
+initrd.img
+lib
+lib32
+lib64
+libx32
