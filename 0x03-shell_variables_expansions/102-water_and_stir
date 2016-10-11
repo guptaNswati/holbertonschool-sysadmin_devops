@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $((8#((5#$WATER | tr 'water' '12345') + (5#$STIR | tr 'stir.' '01234')) | tr 'behlnort' '12345678'))
