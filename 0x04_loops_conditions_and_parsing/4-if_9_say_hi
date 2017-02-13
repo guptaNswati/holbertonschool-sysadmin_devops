@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays Holberton School 10 times, but for the 9th iteration, also displays Hi.
+i=0
+while [ $i -lt 10 ]; do
+    if [ "$i" == "8" ]; then
+	echo "Hi"
+    else
+	echo "Holberton School"
+    fi
+    let i+=1
+done
