@@ -1,5 +1,13 @@
 0x04. Bash: Loops, conditions and parsing
 
+### Style and Specifications:
+All scripts need execution permit and are checked with shellcheck for errors and formatting.
+```
+chmod u+x file
+shellcheck file
+./file
+```
+### DEscription of Files:
 0-RSA_public_key.pub - contains a SSH RSA public key to access remote server via ssh.
 
 0-command - contains ssh rsa key-gen command.
