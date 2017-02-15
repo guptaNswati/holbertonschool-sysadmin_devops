@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This script displays the content of the file /etc/password in a specific format.
-while IFS=":" read -r f1 _ _ f4 _ f6 _; do
-    echo "$f1:$f4:$f6"
+while IFS=":" read -r f1 _ f3 _  _ f6 _; do
+    echo "$f1:$f3:$f6"
 done < /etc/passwd
