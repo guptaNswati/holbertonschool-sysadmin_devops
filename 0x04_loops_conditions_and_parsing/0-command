@@ -1,2 +1,0 @@
-# This is the command for ssh rsa public/private key-gen.
-ssh-keygen -t rsa

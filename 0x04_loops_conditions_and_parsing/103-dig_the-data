@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# This script parses an Apache log file and sorts based on IPs and display number of request by same IP, IP and HTTP status code.
-awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -nr
