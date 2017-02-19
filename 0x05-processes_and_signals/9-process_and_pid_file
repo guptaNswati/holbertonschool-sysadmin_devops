@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script creates file /var/run/holbertonscript.pid, prints a string literal and traps signals and accordingly deal with them.
+file=/var/run/holbertonscript.pid
+echo $$ >> $file
+function clean_up {
+    rm $file
+    exit
+}
+trap 'echo Y U no love me?!; clean_up' SIGINT
+trap 'echo I hate the kill command; clean_up' SIGTERM SIGQUIT
+while :; do
+    echo "To infinity and beyond"
+    sleep 2
+done
