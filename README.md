@@ -10,5 +10,5 @@ chmod u+x file
 Each directory is named after a concept and contains ordered exercises from mandatory to advance level, and a README.md with a short description of its files.
 ## Author
 **Swati Gupta**
-I have coded all of these exercises during my software engineering training at [Holberton School](https://holbertonschool.com) and are part of low-level-track curriculum.
+I have coded all of these exercises during my software engineering training at [Holberton School](https://holbertonschool.com) and are part of Sysadmin_Devops-track curriculum.
 * [Linkedin](https://www.linkedin.com/in/swatig15)
