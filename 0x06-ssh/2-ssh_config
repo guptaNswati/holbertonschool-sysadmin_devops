@@ -1,0 +1,3 @@
+Host 54.204.149.233
+     PasswordAuthentication no
+     IdentityFile ~/.ssh/holberton
