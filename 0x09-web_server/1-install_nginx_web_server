@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Install nginx web server
 sudo apt-get -y install nginx
-echo "Holberton School" > index.html
-sudo mv index.html /usr/share/nginx/html/
+sudo -i eval echo "Holberton School" > /usr/share/nginx/html/index.html
