@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# This script configures Nginx so that its HTTP response contains a custom header
+# This script configures Nginx so that its HTTP response contains a custom header                                                              
 sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo sed -i '29 i \        rewrite ^\/redirect_me \/https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+sudo sed -i "29 i\ rewrite ^\/redirect_me \/https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 find_str="#error_page 404 /404.html;"
 replc_str="error_page 404 /custom_404.html;\n location = /custom_404.html {\n root /usr/share/nginx/html;\n internal;\n}"
 sudo sed -i "s@$find_str@$replc_str@" /etc/nginx/sites-available/default
 hostnm=$(hostname | cut -d'-' -f2-)
-sudo sed "28 a\ \n # adding custom header \n add_header X-Served-By $hostnm;\n" /etc/nginx/nginx.conf  > /dev/null 2>&1
+sudo sed -i "30 i\ # adding custom header \n add_header X-Served-By $hostnm;\n" /etc/nginx/sites-available/default
 sudo service nginx restart
