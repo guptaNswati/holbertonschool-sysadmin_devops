@@ -8,6 +8,5 @@ echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 find_str="#error_page 404 /404.html;"
 replc_str="error_page 404 /custom_404.html;\n location = /custom_404.html {\n root /usr/share/nginx/html;\n internal;\n}"
 sudo sed -i "s@$find_str@$replc_str@" /etc/nginx/sites-available/default
-hostnm=$(hostname | cut -d'-' -f2-)
-sudo sed -i "30 i\ # adding custom header \n add_header X-Served-By $hostnm;\n" /etc/nginx/sites-available/default
+sudo sed -i "30 i\ # adding custom header \n add_header X-Served-By $hostname;\n" /etc/nginx/sites-available/default
 sudo service nginx restart

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy(load balancer)
+sudo apt-get update
+sudo apt-get -y install haproxy
+# enable HAProxy
+sudo sed -i "s@=0@=1@" /etc/default/haproxy
+# congif with round-robin load balancing algo
+add_webfarm="\nlisten webfarm 0.0.0.0:80 \n mode http \n balance roundrobin \n option httpclose \n option forwardfor \n server 77-web-01 52.71.155.152:80 check \n server 77-web-02 184.72.141.74:80 check \n"
+sudo sed -i "25 i\ $add_webfarm" /etc/haproxy/haproxy.cfg
+sudo service haproxy start
