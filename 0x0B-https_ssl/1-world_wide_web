@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays information about subdomains.
+if [ $# -lt 1 ]; then
+   echo "Usage: domain subdomain"
+else
+    dig $1 | awk 'c&&c--;/ANSWER SECTION:/{c=2}'
+   #echo "The subdomain [sd] is a [RECORD_TYPE] record and points to [ip]"
+fi
