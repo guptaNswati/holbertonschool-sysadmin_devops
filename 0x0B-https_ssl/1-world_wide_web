@@ -1,8 +1,26 @@
 #!/usr/bin/env bash
 # This script displays information about subdomains.
-if [ $# -lt 1 ]; then
-   echo "Usage: domain subdomain"
-else
-    dig $1 | awk 'c&&c--;/ANSWER SECTION:/{c=2}'
-   #echo "The subdomain [sd] is a [RECORD_TYPE] record and points to [ip]"
-fi
+
+function dig_all {
+    printf "The subdomain www is a "
+    dig www."$1" | awk 'c&&c--;/ANSWER SECTION:/{c=1}' | awk '{printf "%s record and points to %s\n", $4, $5}'
+    printf "The subdomain lb-01 is a "
+    dig lb-01."$1" | awk 'c&&c--;/ANSWER SECTION:/{c=1}' | awk '{printf "%s record and points to %s\n", $4, $5}'
+    printf "The subdomain web-01 is a "
+    dig web-01."$1" | awk 'c&&c--;/ANSWER SECTION:/{c=1}' | awk '{printf "%s record and points to %s\n", $4, $5}'
+    printf "The subdomain web-02 is a "
+    dig web-02."$1" | awk 'c&&c--;/ANSWER SECTION:/{c=1}' | awk '{printf "%s record and points to %s\n", $4, $5}'
+}
+
+case "$#" in
+    0)
+        echo "Usage: domain subdomain"
+	;;
+    1)
+        dig_all "$@"
+	;;
+    2)
+	printf "The subdomain %s is a " "$2"
+	dig "$2.$1" | awk 'c&&c--;/ANSWER SECTION:/{c=1}' | awk '{printf "%s record and points to %s\n", $4, $5}'
+	;;
+esac
