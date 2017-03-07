@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# this script configures a Ubuntu server to change localhost ip and fb ip
+cp /etc/hosts ~/hosts_backup
+sed 's/.*127.0.0.1 localhost.*/127.0.0.2 localhost/' /etc/hosts
+chng_fb="\n # changing facebooks ip \n 8.8.8.8 \t facebook.com\n"
+sed -i "9 a\ $chng_fb" /etc/hosts
