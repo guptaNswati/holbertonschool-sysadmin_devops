@@ -1,0 +1,6 @@
+sudo ufw allow ssh/tcp
+sudo ufw allow https/tcp
+sudo ufw allow http/tcp
+sudo ufw logging on
+sudo ufw enable
+sudo ufw status
