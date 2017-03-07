@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this script make localhost listen on port 98. Ref: http://www.thegeekstuff.com/2012/04/nc-command-examples/
+nc -l 98

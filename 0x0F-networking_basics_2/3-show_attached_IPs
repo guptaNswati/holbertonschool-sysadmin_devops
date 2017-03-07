@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script displays all active IPv4 IPs of the localhost.
+netstat -4 | tail -n +3 | grep "ESTABLISHED" | cut -d ":" -f2 | cut -d " " -f2 | grep -v [A-Za-z]
