@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# debug Nginx in an ubuntu container's to find which port its listening on and make it listen on 80
+# commands used to debug and fix
+sudo service nginx status
+sudo service nginx restart
+cat /var/log/nginx/error.log
+sudo netstat -pan
+curl 0:8080
+grep server /etc/nginx/sites-available/default
+grep server /etc/nginx/sites-enabled/default
+diff /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+cp /etc/nginx/sites-enabled/default ./default_backup
+rm /etc/nginx/sites-enabled/default
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
+curl 0:80
+sudo netstat -pan | grep 80
