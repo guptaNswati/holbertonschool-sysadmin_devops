@@ -2,6 +2,6 @@
 # Fix ubuntu container so that Nginx is running as the nginx user, not as root.
 chmod 755 /etc/nginx/nginx.conf
 wget https://transfer.sh/mMHzV/nginx-1.conf -O /etc/nginx/nginx.conf
-chown --recursive nginx /usr/share/nginx/ /etc/nginx /var/log/nginx /var/run/nginx.pid
+sudo chown --recursive nginx /usr/share/nginx/ /etc/nginx /var/log/nginx
 pkill -9 apache2
 su nginx -c nginx
