@@ -4,4 +4,4 @@ pkill -9 apache2
 chmod 755 /etc/nginx/nginx.conf
 wget https://transfer.sh/ZrrOh/nginx-1.conf -O /etc/nginx/nginx.conf >> /dev/null 2>&1
 sudo chown --recursive nginx /usr/share/nginx/ /etc/nginx /var/log/nginx
-su nginx -c nginx >> /dev/null 2>&1
+su nginx /usr/sbin/nginx -c nginx >> /dev/null 2>&1
