@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Fix ubuntu container so that Nginx is running as the nginx user, not as root.
+# Ref: https://github.com/exratione/non-root-nginx/blob/master/nginx.conf
+#commands
+service nginx status
+service nginx start
+service nginx status
+ps aux
+cat /etc/nginx/nginx.conf
+ls -al /etc/nginx/
+chmod 755 /etc/nginx/nginx.conf
+chown nginx /usr/share/nginx/
+su nginx -c nginx
