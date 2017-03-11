@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # debug Nginx in an ubuntu container's to find which port its listening on and make it listen on 80
-rm /etc/nginx/sites-enabled/default
+service nginx stop
 cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
