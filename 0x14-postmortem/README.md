@@ -15,7 +15,7 @@ At 2:00 PM PT on 02-20-2017 Apache stopped running. Apache was running inside a 
 - 2:30 PM website was operational and available to users.
 
 ## Root Cause
-Apache stopped working because of high 
+A new docker container was created to test apache installation, running and handling of traffic inside a container. As part of the process apache was supposed to be uninstalled and reinstalled. During the uninstallation, some garbage packages were corrupting the container, causing it not to get started.  
 
 
 ## Resolution
@@ -23,4 +23,5 @@ Destroyed the container, created new and started Apache with service apache star
 
 
 ## Preventive measures
+Its decided to check apache's running status every 2 hours and everytime a new container is used, a script will automatically test uninstallation, testing if everything related to apache is removed or not and alerts the team. And afterwards container will be updated and prepared to reinstall and start apache
 
