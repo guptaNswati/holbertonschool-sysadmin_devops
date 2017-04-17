@@ -29,4 +29,4 @@ if __name__ == "__main__":
         for task in tasks:
             f.write('"' + str(employee_id) + '"' + "," + '"' + name + '"' + ","
                     + '"' + str(task.get('completed')) + '"' + "," + '"'
-                    + task.get('title') + '"'+ "\n")
+                    + task.get('title') + '"' + "\n")

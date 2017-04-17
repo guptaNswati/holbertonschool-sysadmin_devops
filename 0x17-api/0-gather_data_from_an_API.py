@@ -23,7 +23,7 @@ if __name__ == "__main__":
             if task.get('completed'):
                 completed += 1
                 done_tasks.append(task.get('title'))
-    
+
     req = requests.get("https://jsonplaceholder.typicode.com/users/")
     for employee in req.json():
         if employee.get('id') == employee_id:
