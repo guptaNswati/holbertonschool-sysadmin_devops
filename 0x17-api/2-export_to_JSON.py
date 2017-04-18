@@ -28,8 +28,9 @@ if __name__ == "__main__":
         f.write('{"' + str(employee_id) + '": [')
         for task in range(0, len(tasks) - 1):
             f.write('{"' + "task" + '": ' + '"' + tasks[task].get('title') +
-                    '", ' + '"completed": ' + str(tasks[task].get('completed'))
-                    + ", " + '"username": ' +  '"' + name + '"}, ')
+                    '", ' + '"completed":' + " " +
+                    str(tasks[task].get('completed')) + ", "
+                    + '"username": ' + '"' + name + '"}, ')
         f.write('{"' + "task" + '": ' + '"' + tasks[task].get('title') + '", '
-                + '"completed": ' + str(tasks[task].get('completed')) + ", "
-                + '"username": ' +  '"' + name + '"}]}')
+                + '"completed":' + " " + str(tasks[task].get('completed'))
+                + ", " + '"username": ' + '"' + name + '"}]}')
