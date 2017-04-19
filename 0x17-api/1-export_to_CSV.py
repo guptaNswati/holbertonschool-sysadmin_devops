@@ -27,6 +27,6 @@ if __name__ == "__main__":
     file_name = "{:d}.csv".format(employee_id)
     with open(file_name, 'w') as f:
         for task in tasks:
-            f.write('"' + str(employee_id) + '"' + "," + '"' + name + '"' + ","
-                    + '"' + str(task.get('completed')) + '"' + "," + '"'
-                    + task.get('title') + '"' + "\n")
+            f.write('"' + str(employee_id) + '"' + "," + '"' + name + '"' +
+                    "," + '"' + str(task.get('completed')) + '"' + "," +
+                    '"' + task.get('title') + '"' + "\n")

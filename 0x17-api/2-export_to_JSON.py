@@ -31,6 +31,7 @@ if __name__ == "__main__":
                     '", ' + '"completed":' + " " +
                     str(tasks[task].get('completed')) + ", "
                     + '"username": ' + '"' + name + '"}, ')
-        f.write('{"' + "task" + '": ' + '"' + tasks[task].get('title') + '", '
-                + '"completed":' + " " + str(tasks[task].get('completed'))
-                + ", " + '"username": ' + '"' + name + '"}]}')
+        f.write('{"' + "task" + '": ' + '"' + tasks[task].get('title') +
+                '", ' + '"completed":' + " " + str(tasks[task].get(
+                    'completed')) + ", " + '"username": ' +
+                '"' + name + '"}]}')

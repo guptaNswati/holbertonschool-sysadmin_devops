@@ -21,9 +21,9 @@ if __name__ == "__main__":
             for task in req.json():
                 if user[0] == int(task.get('userId')):
                     f.write('{"username' + '": ' + '"' + str(user[1]) +
-                            '", ' + '"task": ' + '"' + task.get('title')
-                            + '", ' + '"completed": '
-                            + str(task.get('completed')) + ", ")
+                            '", ' + '"task": ' + '"' + task.get(
+                                'title') + '", ' + '"completed": ' +
+                            str(task.get('completed')) + ", ")
     with open(file_name, 'rb+') as f:
         f.seek(-2, os.SEEK_END)
         f.truncate()
